@@ -24,16 +24,16 @@ This project solves the problem of static, expensive air quality monitoring stat
 - [`motor_control.ino`](./code/motor_control.ino) - Functions to control robot movement.
 - [`sensor_reading.ino`](./code/sensor_reading.ino) - Functions to read sensor data and send to app.
 
- 🔄 Workflow
+ ## 🔄 Workflow
 
 ```mermaid
 graph TD
-    Start[Start System] --> Init[Initialize Hardware & Wi-Fi]
+    Start[Start System] --> Init[Initialize Hardware and Wi-Fi]
     Init --> ConnectBlynk[Connect to Blynk App]
     ConnectBlynk --> MainLoop[Main Loop Running]
-    MainLoop --> ReadSensors[Read Gas Sensors (CH₄ & CO)]
+    MainLoop --> ReadSensors[Read Gas Sensors]
     MainLoop --> ReceiveCommands[Receive Control Commands]
-    ReceiveCommands --> MoveRobot[Move Robot (F/B/L/R)]
+    ReceiveCommands --> MoveRobot[Move Robot (Forward/Backward/Left/Right)]
     ReadSensors --> SendData[Send Gas Data to App]
     MoveRobot --> MainLoop
     SendData --> MainLoop
