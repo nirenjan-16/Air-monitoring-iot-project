@@ -9,6 +9,6 @@ Serial.begin(9600);
 EspSerial.begin(9600); 
 delay(100); 
 Blynk.begin(auth, wifi, ssid, pass);
-timer.setInterval(1000L,
+timer.setInterval(100L,
 send_parameters);
  }
