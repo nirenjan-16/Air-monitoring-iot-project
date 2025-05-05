@@ -33,7 +33,7 @@ graph TD
     ConnectBlynk --> MainLoop[Main Loop Running]
     MainLoop --> ReadSensors[Read Gas Sensors]
     MainLoop --> ReceiveCommands[Receive Control Commands]
-    ReceiveCommands --> MoveRobot[Move Robot (Forward/Backward/Left/Right)]
+    ReceiveCommands --> MoveRobot[Move Robot Directions]
     ReadSensors --> SendData[Send Gas Data to App]
     MoveRobot --> MainLoop
     SendData --> MainLoop
