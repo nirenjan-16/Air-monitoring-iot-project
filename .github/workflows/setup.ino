@@ -1,4 +1,3 @@
-Setup Function
 
 void setup()
  {
